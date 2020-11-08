@@ -1,7 +1,7 @@
 <div class="container mt-5 animated fadeIn">
   <div class="row">
     <div class="col">
-      <h1>{{ heroe.nombre }} <small class="text-muted">{{ heroe.aparicion }}</small>
+      <h1>{{ heroe.nombre | uppercase }}
         <span *ngIf="heroe.casa == 'DC'"><img class="heroe-logo ml-2" src="assets/img/dc_logo.png" alt=""></span>
         <span *ngIf="heroe.casa == 'Marvel'"><img class="heroe-logo ml-2" src="assets/img/marvel_logo.png" alt=""></span>
       </h1>
@@ -14,7 +14,8 @@
       <button (click)="regresar()" class="btn btn-outline-danger btn-block mt-2">Regresar</button>
     </div>
     <div class="col-12 col-md-8">
-      <p>{{ heroe.bio }}</p>
+      <p>Aparición <small class="text-muted">{{ heroe.aparicion | date: 'y'}}</small></p>
+      <p>Bio: {{ heroe.bio }}</p>
     </div>
   </div>
 </div>
