@@ -14,7 +14,7 @@
       <button (click)="regresar()" class="btn btn-outline-danger btn-block mt-2">Regresar</button>
     </div>
     <div class="col-12 col-md-8">
-      <p>Aparición <small class="text-muted">{{ heroe.aparicion | date: 'y'}}</small></p>
+      <p>Primera aparición: <small class="text-muted">{{ heroe.aparicion | date: 'fullDate' | uppercase }}</small></p>
       <p>Bio: {{ heroe.bio }}</p>
     </div>
   </div>
